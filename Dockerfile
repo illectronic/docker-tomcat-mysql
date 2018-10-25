@@ -1,18 +1,9 @@
-FROM FROM ubuntu
-
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get -y install openjdk-8-jdk
-RUN apt-get -y install memcached
-RUN apt-get -y install gradle
-RUN apt-get -y install git
-RUN apt-get -y install ssh
-
-ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
+FROM openjdk:8
+MAINTAINER Manuel de la Peña <manuel.delapenya@liferay.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TOMCAT_MAJOR_VERSION=8
-ENV TOMCAT_VERSION=8.5.5
+ENV TOMCAT_VERSION=8.0.53
 ENV TOMCAT_HOME=/opt/apache-tomcat-$TOMCAT_VERSION
 
 # Prepare the installation of mysql-server and tomcat 8
