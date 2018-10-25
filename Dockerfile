@@ -2,7 +2,6 @@ FROM FROM ubuntu
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get -y install mysql-server
 RUN apt-get -y install openjdk-8-jdk
 RUN apt-get -y install memcached
 RUN apt-get -y install gradle
