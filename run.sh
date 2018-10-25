@@ -6,6 +6,7 @@ if [[ ! -d $VOLUME_HOME/mysql ]]; then
     echo "=> An empty or uninitialized MySQL volume is detected in $VOLUME_HOME"
     echo "=> Installing MySQL ..."
     mysqld --initialize-insecure --user=mysql > /dev/null 2>&1
+    service mysql start
     echo "=> Done!"  
     /create_mysql_admin_user.sh
 else
