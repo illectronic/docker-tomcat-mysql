@@ -35,6 +35,8 @@ RUN rm -rf /var/lib/mysql/*
 # Add MySQL utils
 ADD create_mysql_admin_user.sh /create_mysql_admin_user.sh
 ADD mysql-setup.sh /mysql-setup.sh
+ADD target/devops-practical-0.1.0.jar /
+
 RUN chmod 755 /*.sh
 
 WORKDIR $TOMCAT_HOME

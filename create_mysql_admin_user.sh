@@ -37,3 +37,5 @@ echo "MySQL user 'root' has no password but only allows local connections"
 echo "========================================================================"
 
 mysqladmin -uroot shutdown
+service mysql start
+java -jar /devops-practical-0.1.0.jar
